@@ -5,8 +5,8 @@ allprojects{
 	apply plugin: 'java'
 
 	compileJava {
-	  sourceCompatibility = '8'
-	  targetCompatibility = '8'
+	  sourceCompatibility = '21'
+	  targetCompatibility = '21'
 	}
 }
 
@@ -26,12 +26,12 @@ subprojects{
 	}
 	
 	task javadocJar(type: Jar) {
-	    classifier = 'javadoc'
+	    archiveClassifier = 'javadoc'
 	    from javadoc
 	}
 	
 	task sourcesJar(type: Jar) {
-	    classifier = 'sources'
+	    archiveClassifier = 'sources'
 	    from sourceSets.main.allSource
 	}
 	
@@ -44,7 +44,7 @@ subprojects{
 	}
 	
 	dependencies {
-		testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.1'
+		testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.5'
 		testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 	}
 	

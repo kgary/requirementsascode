@@ -164,7 +164,11 @@ class SayHelloRequest {
 * [requirements as code examples](https://github.com/bertilmuth/requirementsascode/tree/master/requirementsascodeexamples): example projects illustrating the use of requirements as code.
 
 ## Build from sources
-Use Java >= 11 and the project's gradle wrapper to build from sources.
+Use Java 21 and the project's Gradle wrapper to build from sources:
+
+``` shell
+bash ./gradlew clean build --no-daemon
+```
 
 ## Related topics
 * The work of Ivar Jacobson on Use Cases. As an example, have a look at [Use Case 2.0](https://www.ivarjacobson.com/publications/white-papers/use-case-ebook).
