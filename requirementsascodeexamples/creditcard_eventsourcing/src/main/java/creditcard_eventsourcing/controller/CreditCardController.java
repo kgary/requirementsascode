@@ -19,8 +19,12 @@ import creditcard_eventsourcing.persistence.EventStore;
  */
 @RestController
 class CreditCardController {
+	private final EventStore eventStore;
+
 	@Autowired
-	EventStore eventStore;
+	public CreditCardController(EventStore eventStore) {
+		this.eventStore = eventStore;
+	}
 
 	@GetMapping("/cards")
 	List<CreditCardAggregateRoot> creditCardList() {
